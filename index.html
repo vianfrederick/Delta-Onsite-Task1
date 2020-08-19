@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Graph Calculator</title>
+    <style media="screen">
+      *{
+        margin: 0;
+        padding :0;
+        text-align: center;
+      }
+
+      canvas{
+        border : 1px solid black;
+        margin-left: 170px;
+        margin-top: 50px;
+      }
+      input{
+        height: 50px;
+        border: 1px solid rgba(252, 252, 252, 0.4);
+ background-color: black;
+ width: 500px;
+ border-radius: 3px;
+ font-family: "Source Sans Pro", sans-serif;
+ padding: 10px 15px;
+ margin: 0 auto 10px auto;
+ display: block;
+ text-align: center;
+ font-size: 30px;
+ color: white;
+ font-weight: 300;
+margin-top: 19px;
+margin-bottom : 37px;
+      }
+
+      button{
+        appearance: none;
+  outline: 0;
+  background-color: white;
+  border: 0;
+  padding: 10px 15px;
+  color: #50a3a2;
+  border-radius: 3px;
+  width: 100px;
+  font-size: 18px;
+  margin-bottom: 100px;
+      }
+      body {
+  font-family: "Source Sans Pro", sans-serif;
+  color: white;
+  font-weight: 300;
+  background: #50a3a2;
+  width: 100%;
+  height: 100%;
+}
+label{
+  color: Yellow;
+  font-size: 4rem;
+  margin-top: 100px;
+  text-align: center;
+}
+h3{
+  font-size: 2rem;
+  margin-bottom: 20px;
+}
+h1{
+  margin-top: 100px;
+  margin-bottom: 100px;
+  font-size: 8rem;
+}
+img{
+  margin-top: 175px;
+  border-radius: 100%;
+}
+section{
+  background-color: white;
+  border: red 1px solid;;
+color: black;
+width : 1000px;
+height : 150px;
+margin-left: 180px;
+  margin-bottom: 100px;
+  border-radius: 15px;
+}
+    </style>
+  </head>
+  <body>
+
+<img src="logo.png" alt="LOGO">
+<h1>Graph Calculator</h1>
+<label for="">FUNCTION:</label>
+ <input type="text" id="myText" placeholder="y =">
+
+
+
+  <button type="submit"onclick="myFunction()">GO</button>
+
+<section>
+  <h3>Note : </h3>
+  <p>1) It is important to follow a particular format to put in the function. For normal arithemetic operations, it is the normal one only. But for some functions , you have to add a prefix "Math.".
+     2) For for info, refer</p>
+     <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math">Math Operations</a>
+     <p>3)And also make sure that the function is of "x" variable alone</p>
+</section>
+
+<script type="text/javascript">
+  function myFunction(){
+    var x = document.getElementById("myText").value;
+    localStorage.setItem("FUNCTION",x);
+    location.replace("graph.html");
+  }
+</script>
+
+  </body>
+</html>

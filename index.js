@@ -91,9 +91,9 @@ function drawMarkings(){
 
 function drawGraph(){
   ctx.beginPath();
-  ctx.moveTo(block(2),block(20));
+  ctx.moveTo(block(2),block(20) - block(funcOutput[0]));
 
-for (var x = 0; x < 1000; x = x + 0.5) {
+for (var x = 0.5; x < 1000; x = x + 0.5) {
      ctx.lineTo(block(2 + x), block(20) - block(funcOutput[x]));
      ctx.strokeStyle = "red";
   ctx.stroke();
